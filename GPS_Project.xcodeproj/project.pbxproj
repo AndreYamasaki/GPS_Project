@@ -13,6 +13,7 @@
 		F2C4CA9126991FA1005E61EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2C4CA8F26991FA1005E61EB /* Main.storyboard */; };
 		F2C4CA9326991FA3005E61EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2C4CA9226991FA3005E61EB /* Assets.xcassets */; };
 		F2C4CA9626991FA3005E61EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2C4CA9426991FA3005E61EB /* LaunchScreen.storyboard */; };
+		F2C4CA9E269922F5005E61EB /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C4CA9D269922F5005E61EB /* MapsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F2C4CA9226991FA3005E61EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2C4CA9526991FA3005E61EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2C4CA9726991FA3005E61EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2C4CA9D269922F5005E61EB /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				F2C4CA8926991FA1005E61EB /* AppDelegate.swift */,
 				F2C4CA8B26991FA1005E61EB /* SceneDelegate.swift */,
 				F2C4CA8D26991FA1005E61EB /* ViewController.swift */,
+				F2C4CA9D269922F5005E61EB /* MapsViewController.swift */,
 				F2C4CA8F26991FA1005E61EB /* Main.storyboard */,
 				F2C4CA9226991FA3005E61EB /* Assets.xcassets */,
 				F2C4CA9426991FA3005E61EB /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 				F2C4CA8E26991FA1005E61EB /* ViewController.swift in Sources */,
 				F2C4CA8A26991FA1005E61EB /* AppDelegate.swift in Sources */,
 				F2C4CA8C26991FA1005E61EB /* SceneDelegate.swift in Sources */,
+				F2C4CA9E269922F5005E61EB /* MapsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
