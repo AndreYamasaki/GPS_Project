@@ -33,7 +33,7 @@ extension MapsViewController: CLLocationManagerDelegate {
         let location = locations.last
         mapView.centerCoordinate = location!.coordinate
         let region = mapView.regionThatFits(MKCoordinateRegion(center: location!.coordinate, latitudinalMeters: 600.0, longitudinalMeters: 600.0))
-        mapView.setRegion(region, animated: true)
+        mapView.setRegion(region, animated: false)
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
