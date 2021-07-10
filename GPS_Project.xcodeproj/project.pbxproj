@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F285FA49269A1E1F00E85C74 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = F285FA48269A1E1F00E85C74 /* Address.swift */; };
+		F285FA4B269A246400E85C74 /* AddressesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F285FA4A269A246400E85C74 /* AddressesTableViewController.swift */; };
 		F2C4CA8A26991FA1005E61EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C4CA8926991FA1005E61EB /* AppDelegate.swift */; };
 		F2C4CA8C26991FA1005E61EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C4CA8B26991FA1005E61EB /* SceneDelegate.swift */; };
 		F2C4CA8E26991FA1005E61EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C4CA8D26991FA1005E61EB /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F285FA48269A1E1F00E85C74 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		F285FA4A269A246400E85C74 /* AddressesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressesTableViewController.swift; sourceTree = "<group>"; };
 		F2C4CA8626991FA1005E61EB /* GPS_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPS_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2C4CA8926991FA1005E61EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2C4CA8B26991FA1005E61EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +43,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F285FA4C269A3DC200E85C74 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F285FA48269A1E1F00E85C74 /* Address.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F285FA4D269A3DCA00E85C74 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F2C4CA8F26991FA1005E61EB /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F285FA4E269A3DD600E85C74 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F2C4CA8D26991FA1005E61EB /* ViewController.swift */,
+				F2C4CA9D269922F5005E61EB /* MapsViewController.swift */,
+				F285FA4A269A246400E85C74 /* AddressesTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		F2C4CA7D26991FA1005E61EB = {
 			isa = PBXGroup;
 			children = (
@@ -58,11 +88,11 @@
 		F2C4CA8826991FA1005E61EB /* GPS_Project */ = {
 			isa = PBXGroup;
 			children = (
+				F285FA4C269A3DC200E85C74 /* Model */,
+				F285FA4D269A3DCA00E85C74 /* View */,
+				F285FA4E269A3DD600E85C74 /* Controller */,
 				F2C4CA8926991FA1005E61EB /* AppDelegate.swift */,
 				F2C4CA8B26991FA1005E61EB /* SceneDelegate.swift */,
-				F2C4CA8D26991FA1005E61EB /* ViewController.swift */,
-				F2C4CA9D269922F5005E61EB /* MapsViewController.swift */,
-				F2C4CA8F26991FA1005E61EB /* Main.storyboard */,
 				F2C4CA9226991FA3005E61EB /* Assets.xcassets */,
 				F2C4CA9426991FA3005E61EB /* LaunchScreen.storyboard */,
 				F2C4CA9726991FA3005E61EB /* Info.plist */,
@@ -140,10 +170,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F285FA4B269A246400E85C74 /* AddressesTableViewController.swift in Sources */,
 				F2C4CA8E26991FA1005E61EB /* ViewController.swift in Sources */,
 				F2C4CA8A26991FA1005E61EB /* AppDelegate.swift in Sources */,
 				F2C4CA8C26991FA1005E61EB /* SceneDelegate.swift in Sources */,
 				F2C4CA9E269922F5005E61EB /* MapsViewController.swift in Sources */,
+				F285FA49269A1E1F00E85C74 /* Address.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

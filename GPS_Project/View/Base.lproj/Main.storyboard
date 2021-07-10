@@ -76,8 +76,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2wR-QJ-7C5">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite um endereço" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kQP-bY-j1K">
+                                <rect key="frame" x="20" y="102" width="314" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hME-OR-utw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oem-sJ-YAt">
+                                <rect key="frame" x="342" y="102" width="65" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Go"/>
+                                <connections>
+                                    <action selector="tappedShowAddress:" destination="h6T-RO-J8b" eventType="touchUpInside" id="Paq-eM-3WZ"/>
+                                </connections>
+                            </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2wR-QJ-7C5">
+                                <rect key="frame" x="9" y="88" width="414" height="773"/>
                             </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SKK-Yv-rS6"/>
@@ -85,18 +102,53 @@
                         <constraints>
                             <constraint firstItem="SKK-Yv-rS6" firstAttribute="trailing" secondItem="2wR-QJ-7C5" secondAttribute="trailing" id="4jE-nK-2wy"/>
                             <constraint firstItem="2wR-QJ-7C5" firstAttribute="top" secondItem="SKK-Yv-rS6" secondAttribute="top" id="BJr-YB-Nwf"/>
+                            <constraint firstItem="kQP-bY-j1K" firstAttribute="leading" secondItem="SKK-Yv-rS6" secondAttribute="leading" constant="20" id="BN0-Rd-wVu"/>
+                            <constraint firstItem="2wR-QJ-7C5" firstAttribute="top" secondItem="oem-sJ-YAt" secondAttribute="bottom" constant="-48" id="I3O-r2-TrX"/>
+                            <constraint firstItem="SKK-Yv-rS6" firstAttribute="bottom" secondItem="kQP-bY-j1K" secondAttribute="bottom" constant="725" id="KG7-yP-Pta"/>
+                            <constraint firstItem="kQP-bY-j1K" firstAttribute="top" secondItem="SKK-Yv-rS6" secondAttribute="top" constant="14" id="QM9-w5-nSi"/>
+                            <constraint firstItem="SKK-Yv-rS6" firstAttribute="trailing" secondItem="kQP-bY-j1K" secondAttribute="trailing" constant="80" id="agT-dF-NxB"/>
                             <constraint firstItem="2wR-QJ-7C5" firstAttribute="leading" secondItem="SKK-Yv-rS6" secondAttribute="leading" id="iMi-4v-SNm"/>
+                            <constraint firstItem="oem-sJ-YAt" firstAttribute="leading" secondItem="kQP-bY-j1K" secondAttribute="trailing" constant="8" symbolic="YES" id="ww3-Q5-THW"/>
                             <constraint firstItem="SKK-Yv-rS6" firstAttribute="bottom" secondItem="2wR-QJ-7C5" secondAttribute="bottom" id="xOv-bX-DXX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="k1L-pd-5bw"/>
                     <connections>
+                        <outlet property="addressTextField" destination="kQP-bY-j1K" id="MyY-ab-j9h"/>
                         <outlet property="mapView" destination="2wR-QJ-7C5" id="RJt-Bb-fhp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HYr-Yn-dR3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1225" y="82"/>
+            <point key="canvasLocation" x="1224.6376811594205" y="81.696428571428569"/>
+        </scene>
+        <!--Addresses Table View Controller-->
+        <scene sceneID="dl0-lR-BKE">
+            <objects>
+                <tableViewController storyboardIdentifier="AddressTableViewController" id="Rxn-S8-nos" customClass="AddressesTableViewController" customModule="GPS_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0vU-N1-L8w">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddressCell" id="mOK-O7-KmV">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mOK-O7-KmV" id="bsA-gf-y5j">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Rxn-S8-nos" id="nnF-YV-gs7"/>
+                            <outlet property="delegate" destination="Rxn-S8-nos" id="Ek2-r9-ko9"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="viM-cV-Vyj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2083" y="82"/>
         </scene>
     </scenes>
     <resources>
